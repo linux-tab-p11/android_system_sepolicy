@@ -30,3 +30,9 @@ expandattribute update_provider false;
 # of the OMAPI services. Remove once the RELEASE_NATIVE_OMAPI flag is cleaned
 # up and the app-based implementation is removed.
 attribute omapi_server;
+
+# Domains of the Linux containers of a device (a container service and the
+# programs of its containers): the service mounts the filesystems of the
+# containers, their programs run from the containers' own files, and both are
+# root over the containers' files. Exempt from the neverallow rules on those.
+attribute linux_container_domain;

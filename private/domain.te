@@ -1968,6 +1968,7 @@ neverallow {
     -native_app_zygote
     -webview_zygote
     -zygote
+    -linux_container_domain
     userdebug_or_eng(`-mediaextractor')
     userdebug_or_eng(`-mediaswcodec')
     userdebug_or_eng(`-overlay_remounter')
@@ -2055,6 +2056,7 @@ neverallow {
 # Instead of granting them it is usually better to add the domain to
 # a Unix group or change the permissions of a file.
 define(`dac_override_allowed', `{
+  linux_container_domain
   apexd
   artd
   casefolding_remover
@@ -2101,6 +2103,7 @@ neverallow {
     recovery_only(`-fastbootd')
     -init
     -kernel
+    -linux_container_domain
     -recovery
     -update_engine
     -vold
